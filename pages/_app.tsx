@@ -1,10 +1,12 @@
 import { useState } from 'react';
-import { Hydrate } from '@tanstack/react-query/src/Hydrate';
+import {
+  Hydrate,
+  QueryClient,
+  QueryClientProvider,
+} from '@tanstack/react-query';
 import type { AppProps } from 'next/app';
 import { ThemeProvider } from 'styled-components';
 import { RecoilRoot } from 'recoil';
-import { QueryClientProvider } from '@tanstack/react-query/src/QueryClientProvider';
-import { QueryClient } from '@tanstack/query-core';
 import theme from 'styles/theme';
 import Layout from '@/components/common/layout';
 import '../styles/globals.css';
