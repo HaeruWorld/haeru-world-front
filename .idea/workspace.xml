@@ -4,16 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="591019bf-1e0b-4b77-b347-72c69c4b1b31" name="Changes" comment="">
+    <list default="true" id="591019bf-1e0b-4b77-b347-72c69c4b1b31" name="Changes" comment="### 제목&#10;# [Commit Type]: 제목&#10;# 위와 같은 형식으로 작성하며 제목은 최대 50글자 정도로만 입력&#10;# 제목을 아랫줄에 작성, 제목 끝에 마침표 금지, 무엇을 했는지 명확하게 작성&#10;&#10;### 본문&#10;# 본문(추가 설명)을 아랫줄에 작성&#10;&#10;######### 커밋 예시 #########&#10;# Fix: 빈 스트링 검색 시 오류 수정&#10;#&#10;# 빈 스트링 검색시 null 반환&#10;###########################&#10;&#10;######### Commit Type 종류 #########&#10;# Feat : 기능 추가 작업에 대한 커밋&#10;# Update: 기능 수정 작업에 대한 커밋&#10;# Fix : 버그 코드 수정에 대한 커밋(기능상 오류가 있어야하며 기획에 맞지 않거나 에러에 대한 동작에 대한 코드 수정)&#10;# Build : 빌드 관련 작업에 대한 커밋(runtime에 필요한 코드 이외의 모든 코드)&#10;# Docs : 문서 작업에 대한 커밋(ex. readme.txt 수정)&#10;# Style : UI 스타일 코드 작업에 대한 커밋&#10;# Refactor : 코드 리팩토링 작업에 대한 커밋(버그가 없는 상황에서 개선 목적)&#10;# Test : 테스트 코드 작업에 대한 커밋&#10;# Delete : 쓸모없는 코드 및 파일 삭제에 대한 커밋(ex. 사용하지 않는 패키지, 메서드 및 파일 삭제)&#10;###################################">
+      <change afterPath="$PROJECT_DIR$/.babelrc" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.env.development" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.prettierrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/_document.tsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/components/Test.tsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/components/Test2.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/theme.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -44,7 +45,8 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="yarn" />
-    <property name="settings.editor.selected.configurable" value="settings.nodejs" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
+    <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -68,8 +70,17 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1671023888196</updated>
-      <workItem from="1671023891510" duration="6386000" />
+      <workItem from="1671023891510" duration="6486000" />
+      <workItem from="1671038158868" duration="3247000" />
     </task>
+    <task id="LOCAL-00001" summary="Feat: 기본 환경 세팅&#10;&#10;1. eslint 설정&#10;2. prettier 설정&#10;3. 절대경로 설정">
+      <created>1671038121153</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1671038121153</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -85,5 +96,14 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Feat: 기본 환경 세팅&#10;&#10;1. eslint 설정&#10;2. prettier 설정&#10;3. 절대경로 설정" />
+    <option name="LAST_COMMIT_MESSAGE" value="Feat: 기본 환경 세팅&#10;&#10;1. eslint 설정&#10;2. prettier 설정&#10;3. 절대경로 설정" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
