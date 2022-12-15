@@ -2,14 +2,15 @@ import api, { GetHaeruPlaceParams } from '@/apis/api';
 import getQueryKey from '@/utils/queries/getQueryKeys';
 import { useQuery, UseQueryOptions } from '@tanstack/react-query';
 
-const useHaeruPlaces = (
-  params: GetHaeruPlaceParams,
-  options?: QueryHookOptions<typeof api.getHaeruPlaces>,
-) => {
+const useHaeruPlaces = (params: GetHaeruPlaceParams) => {
   return useQuery(
     getQueryKey('HAERU_PLACES', params),
     () => api.getHaeruPlaces(params),
-    options,
+    {
+      select: (data) => {
+        return data.data;
+      },
+    },
   );
 };
 

@@ -7,10 +7,12 @@ const api = {
     return superFetch.get(`/haeruPlaces/${id}`);
   },
   getHaeruPlaces: async (params: GetHaeruPlaceParams) => {
-    return superFetch.get<GetHaeruPlaceResponse>(`/haeruPlaces`, { params });
+    return superFetch.get<GetHaeruPlaceResponse>(`/haeruPlaces`, {
+      params,
+    });
   },
 };
-type GetHaeruPlaceResponse =
+export type GetHaeruPlaceResponse =
   | {
       haeruPlaces: HaeruPlace[];
       recommendPlaces: null;
