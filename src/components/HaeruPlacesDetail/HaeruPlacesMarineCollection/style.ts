@@ -4,7 +4,13 @@ export const HaeruPlacesMarineCollectionWrapStyle = styled.div`
   margin-top: 40px;
 `;
 
-export const HaeruPlacesMarineCollectionTitleStyle = styled.h3``;
+export const HaeruPlacesMarineCollectionTitleStyle = styled.h3`
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+`;
 
 export const HaeruPlacesMarineCollectionContentStyle = styled.div`
   margin-top: 20px;

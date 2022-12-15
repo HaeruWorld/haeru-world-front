@@ -15,7 +15,7 @@ const MarineCollectionsWrapper = () => {
   return (
     <MarineCollectionsWrapperStyle>
       <img src="/images/area_picture.png" />
-      <div className="title">어떤 애들을 채집해볼까요 ??</div>
+      <div className="title">어떤 생물들이 채집 될까요?</div>
       <div className="card-list">
         <MarineCard
           isSelected={marineCollection.includes('보말')}
@@ -108,7 +108,7 @@ const MarineCollectionsWrapper = () => {
             disabled={marineCollection.length < 1}
             color={marineCollection.length > 0 ? '#fff' : theme.color.gray_03}
             isBorder={marineCollection.length > 0}
-            text="추천받기"
+            text="장소 추천 받기"
           />
         </Link>
       ) : (
@@ -122,7 +122,7 @@ const MarineCollectionsWrapper = () => {
           disabled={marineCollection.length < 1}
           color={marineCollection.length > 0 ? '#fff' : theme.color.gray_03}
           isBorder={marineCollection.length > 0}
-          text="추천받기"
+          text="장소 추천 받기"
         />
       )}
     </MarineCollectionsWrapperStyle>

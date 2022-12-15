@@ -1,16 +1,19 @@
 import styled from 'styled-components';
 
 export const MarineCollectionsWrapperStyle = styled.div`
-  padding: 0 20px;
+  padding: 20px 20px;
 
   & > img {
     width: 100%;
-    height: 100%;
   }
 
   .title {
     margin: 32px 0;
-    text-align: center;
+    font-family: Pretendard;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
   }
 
   .card-list {

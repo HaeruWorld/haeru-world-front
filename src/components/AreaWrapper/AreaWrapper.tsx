@@ -12,7 +12,7 @@ const AreaWrapper = () => {
   return (
     <LocationWrapperStyle>
       <img src="/images/area_picture.png" />
-      <div className="title">어디에서 해루질 해볼까요?</div>
+      <div className="title">어디에서 해루질을 해볼까요 ?</div>
       <img src="/images/jeju_map_picture.png" />
       <div className="btn-list">
         <Button

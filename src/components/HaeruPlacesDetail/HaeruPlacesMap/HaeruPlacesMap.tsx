@@ -11,7 +11,9 @@ import { Map, MapMarker } from 'react-kakao-maps-sdk';
 const HaeruPlacesMap = ({ location, address }: HaeruPlacesMapProps) => {
   return (
     <HaeruPlacesMapWrapStyle>
-      <HaeruPlacesMapTitleStyle>~할 수 있어요(장소)</HaeruPlacesMapTitleStyle>
+      <HaeruPlacesMapTitleStyle>
+        여기서 해루질을 할 수 있어요
+      </HaeruPlacesMapTitleStyle>
       <HaeruPlacesMapAddressStyle>{address}</HaeruPlacesMapAddressStyle>
 
       <HaeruPlacesMapStyle

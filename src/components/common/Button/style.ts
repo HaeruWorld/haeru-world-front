@@ -8,11 +8,12 @@ export const ButtonWrapStyle = styled.button<Omit<ButtonType, 'text'>>`
   background-color: ${(props) =>
     props.disabled ? props.theme.color.gray_04 : props.backgroundColor};
   width: 100%;
-  font-size: 20px;
-  text-align: center;
-  border: none;
-  box-shadow: none;
-  padding: 20px 0;
+  font-family: Pretendard;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  padding: 10px 0;
   overflow: visible;
   border: ${(props) =>
     props.isBorder
