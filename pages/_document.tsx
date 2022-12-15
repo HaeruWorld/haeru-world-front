@@ -41,7 +41,9 @@ export default class MyDocument extends Document {
   render() {
     return (
       <Html>
-        <Head />
+        <Head>
+          <title>바로해루</title>
+        </Head>
         <body>
           <Main />
           <NextScript />
