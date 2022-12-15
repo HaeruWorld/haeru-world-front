@@ -1,4 +1,6 @@
 import useHaeruPlaces from '@/hooks/queries/useHaeruPlaces';
+import { areaAtom, marineCollectionsAtom } from '@/store';
+import { useRecoilValue } from 'recoil';
 
 import HaeruPlaceList from '../haeruPlacesList/HaeruPlaceList';
 import HaeruPlaceTitle from '../haeruPlaceTitle/HaeruPlaceTitle';
@@ -13,15 +15,14 @@ const HaeruPlacesSection = () => {
     서귀포: 'SEOGWIPO',
   } as const;
 
-  const area = '애월';
-  const marineCollections = ['게'];
+  const area = useRecoilValue(areaAtom) || '성산';
+  const marineCollections = useRecoilValue(marineCollectionsAtom);
 
   const { isLoading, data } = useHaeruPlaces({
     area: AREA[area],
-    marineCollections: ['게'],
+    marineCollections,
   });
   if (!data || isLoading) return null;
-
   const { haeruPlaces, recommendPlaces } = data;
   const isEmpty = haeruPlaces === null;
 
@@ -33,10 +34,13 @@ const HaeruPlacesSection = () => {
       <HaeruPlaceTitle
         isEmpty={isEmpty}
         area={area}
-        marineCollections={['게']}
+        marineCollections={marineCollections}
       />
       <MapIllustration places={haeruPlaces || recommendPlaces} />
-      <HaeruPlaceList places={haeruPlaces || recommendPlaces} />
+      <HaeruPlaceList
+        places={haeruPlaces || recommendPlaces}
+        isEmpty={isEmpty}
+      />
     </HaeruPlacesSectionWrapperStyle>
   );
 };

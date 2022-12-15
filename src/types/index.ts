@@ -16,3 +16,5 @@ export type MarineCollectionType =
   | '미역'
   | '조개'
   | '톳';
+
+export type AreaType = '애월' | '제주' | '성산' | '서귀포';
