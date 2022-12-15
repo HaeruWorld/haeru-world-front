@@ -7,8 +7,8 @@ import { HaeruPlaceTitleStyle, HaeruPlacesSectionWrapperStyle } from './style';
 
 const HaeruPlacesSection = () => {
   const { isLoading, data } = useHaeruPlaces({
-    area: '성산',
-    marineCollections: ['게'],
+    area: 'AEWOL',
+    marineCollections: ['톳'],
   });
   if (!data || isLoading) return null;
 
@@ -20,7 +20,6 @@ const HaeruPlacesSection = () => {
   해루질하는 장소를 찾지 못했어요.`;
 
   const isEmpty = haeruPlaces === null;
-
   return (
     <HaeruPlacesSectionWrapperStyle>
       <HaeruPlaceTitleStyle>
