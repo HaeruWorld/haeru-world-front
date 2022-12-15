@@ -12,7 +12,7 @@ const MapIllustration = ({ places }: MapIllustrationProps) => {
   const IMG_HEIGHT = 220;
   return (
     <MapIllustrationStyle>
-      {places.map(({ markerPosition, id }, index) => (
+      {places?.map(({ markerPosition, id }, index) => (
         <NumberTagStyle key={index} {...markerPosition}>
           <Link href={`haeruPlaces/${id}`}>{index + 1}</Link>
         </NumberTagStyle>

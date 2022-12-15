@@ -13,7 +13,7 @@ const theme = {
     gray_03: '#6A6F79',
     gray_04: '#C6C9D0',
     gray_05: '#E7E9EC',
-    gray_06: '#F6F7F9',
+    gray_06: '#F5F5F6',
     gray_07: '#FFFFFF',
   },
 };

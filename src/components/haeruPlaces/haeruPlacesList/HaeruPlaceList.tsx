@@ -2,15 +2,27 @@ import React from 'react';
 import HaeruPlaceItem from '@/components/haeruPlaces/haeruPlaceItem';
 import { HaeruPlaceListULStyle } from './style';
 import { HaeruPlaceListProps } from './types';
+import { useRecoilValue } from 'recoil';
+import { marineCollectionsAtom } from '@/store';
+import { MarineCollectionType } from '@/types';
 
-const HaeruPlaceList = ({ places }: HaeruPlaceListProps) => {
+const HaeruPlaceList = ({ places, isEmpty }: HaeruPlaceListProps) => {
+  const marineCollections = useRecoilValue(marineCollectionsAtom);
+  const allCollections: MarineCollectionType[] = [
+    '게',
+    '미역',
+    '보말',
+    '소라',
+    '조개',
+    '톳',
+  ];
   return (
     <HaeruPlaceListULStyle>
-      {places.map((place, index) => (
+      {places?.map((place, index) => (
         <HaeruPlaceItem
           key={place.id}
           {...place}
-          selectedCollections={['게', '톳']}
+          selectedCollections={isEmpty ? allCollections : marineCollections}
           makerIndex={index}
         />
       ))}

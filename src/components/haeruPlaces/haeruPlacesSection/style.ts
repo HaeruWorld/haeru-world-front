@@ -15,6 +15,7 @@ export const HaeruPlacesSectionWrapperStyle = styled.div`
   align-items: center;
   height: 100%;
   padding: 0 24px 0 24px;
+  overflow: hidden;
 `;
 
 export const LogoStyle = styled.div`
