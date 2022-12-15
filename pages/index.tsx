@@ -1,5 +1,6 @@
 import React from 'react';
+import HomeWrapper from '@/components/HomeWrapper';
 
-const Home = () => <div>main page</div>;
+const Home = () => <HomeWrapper />;
 
 export default Home;
