@@ -8,7 +8,7 @@ const useHaeruPlaces = (params: GetHaeruPlaceParams) => {
     () => api.getHaeruPlaces(params),
     {
       select: (data) => {
-        return data.data;
+        return data.data.data;
       },
     },
   );

@@ -11,7 +11,7 @@ const HaeruPlaceMarineCard = ({
 }: HaeruPlaceMarineCardProps) => {
   return (
     <HaeruPlaceMarineCardWrapStyle>
-      <img
+      <Image
         src={imageUrl}
         alt="해루 가능한 어종 사진"
         width={width}

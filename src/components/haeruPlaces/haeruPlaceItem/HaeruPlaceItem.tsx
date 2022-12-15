@@ -13,14 +13,18 @@ const HaeruPlaceItem = ({
   name,
   marineCollections,
   makerIndex,
+  selectedCollections,
 }: HaeruPlaceItemProps) => {
+  const filteredCollections = marineCollections.filter((collection) =>
+    selectedCollections.includes(collection),
+  );
   return (
     <HaeruPlaceItemWrapStyle>
       <NumberTagStyle>{makerIndex + 1}</NumberTagStyle>
       <ColumStyle>
         <HaeruPlaceItemNameStyle>{name}</HaeruPlaceItemNameStyle>
         <RowStyle>
-          {marineCollections.map((marineCollection) => (
+          {filteredCollections.map((marineCollection) => (
             <LineTag key={marineCollection} text={marineCollection} />
           ))}
         </RowStyle>
