@@ -21,8 +21,6 @@ const haeruPlacesMarineCollection = ({
             key={index}
             imageUrl={item.imageUrl}
             name={item.name}
-            width={113}
-            height={113}
           />
         ))}
       </HaeruPlacesMarineCollectionContentStyle>

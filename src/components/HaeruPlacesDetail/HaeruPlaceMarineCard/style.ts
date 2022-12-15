@@ -9,4 +9,8 @@ export const HaeruPlaceMarineCardWrapStyle = styled.article`
   & > span {
     font-size: 14px;
   }
+
+  & > img {
+    width: 100%;
+  }
 `;

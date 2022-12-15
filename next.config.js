@@ -14,7 +14,7 @@ const nextConfig = {
   },
 
   images: {
-    domains: ['https://haeruworld.run.goorm.io'],
+    domains: ['haeruworld.s3.ap-northeast-2.amazonaws.com'],
   },
 };
 
