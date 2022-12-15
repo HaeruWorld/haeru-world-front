@@ -1,34 +1,47 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# BaruHaeru
+맞춤형 해루질 정보 제공 모바일 웹 서비스
 
-## Getting Started
+🌊 **우리 팀 목표**
 
-First, run the development server:
+- 6팀 중 1등 친화력 팀❤️
+- 나중에 또 만나기 (친하게)
+- 구름톤🍊에서만 즐길 수 있는 것들 몽땅 즐기기
+- 그리고 대상🏆
 
-```bash
-npm run dev
-# or
-yarn dev
+## 🎯 Project's Goal
+
+
+
+
+
+
+## 📌 Getting Started
+### dev
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+  npx msw init public/ --save
+  yarn dev // develop http://localhost:3000
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+### build
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```
+   yarn build
+   yarn start
+```
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+## 📈 User flows
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🌈 Members
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+|이시현|은서|이진희|안동민|손효재|
+|---|---|---|---|--|
+|기획 | 디자인 | 프론트엔드 | 프론트엔드 | 백엔드|
+
