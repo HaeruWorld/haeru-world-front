@@ -1,9 +1,8 @@
-import React from 'react'
+import HaeruPlacesSection from '@/components/haeruPlaces/haeruPlacesSection';
+import React from 'react';
 
 const haeruPlacesPage = () => {
-  return (
-    <div>haeruPlacesPage</div>
-  )
-}
+  return <HaeruPlacesSection />;
+};
 
-export default haeruPlacesPage
+export default haeruPlacesPage;
