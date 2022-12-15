@@ -3,42 +3,31 @@ import { rest } from 'msw';
 const baseUrl = process.env.NEXT_PUBLIC_API_URL;
 
 export const handlers = [
-  rest.post('/login', (req, res, ctx) => {
-    // Persist user's authentication in the session
-    sessionStorage.setItem('is-authenticated', 'true');
-    return res(
-      // Respond with a 200 status code
-      ctx.status(200),
-    );
-  }),
-  rest.get('/user', (req, res, ctx) => {
-    // Check if the user is authenticated in this session
-    const isAuthenticated = sessionStorage.getItem('is-authenticated');
-    if (!isAuthenticated) {
-      // If not authenticated, respond with a 403 error
-      return res(
-        ctx.status(403),
-        ctx.json({
-          errorMessage: 'Not authorized',
-        }),
-      );
-    }
-    // If authenticated, return a mocked user details
+  rest.get(`${baseUrl}/haeruPlaces/1`, (req, res, ctx) => {
     return res(
       ctx.status(200),
       ctx.json({
-        username: 'admin',
+        name: 'test',
+        address: 'test 주소',
+        location: {
+          latitude: 33.55635,
+          longitude: 126.795841,
+        },
+        marineCollections: [
+          {
+            name: 'test marine',
+            imageUrl:
+              'https://cdn.amondz.com/product/75657/resize/mainImg/PSI_800916.jpeg?v=1666860431292',
+          },
+          {
+            name: 'test marine2',
+            imageUrl:
+              'https://cdn.amondz.com/product/75657/resize/mainImg/PSI_800916.jpeg?v=1666860431292',
+          },
+        ],
+        startTime: '12:00',
+        endTime: '17:00',
       }),
     );
   }),
-  // rest.get(`${baseUrl}/example`, (req, res, ctx) => {
-  //   // Check if the user is authenticated in this session
-  //   // If not authenticated, respond with a 403 error
-  //   return res(
-  //     ctx.status(200),
-  //     ctx.json({
-  //       example: 'example',
-  //     }),
-  //   );
-  // }),
 ];
