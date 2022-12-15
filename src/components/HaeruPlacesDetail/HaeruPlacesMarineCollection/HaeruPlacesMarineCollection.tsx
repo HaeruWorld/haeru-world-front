@@ -10,7 +10,6 @@ import HaeruPlaceMarineCard from '@/components/HaeruPlacesDetail/HaeruPlaceMarin
 const haeruPlacesMarineCollection = ({
   marineCollections,
 }: HaeruPlacesMarineCollectionProps) => {
-  console.log('marineCollections: ', marineCollections);
   return (
     <HaeruPlacesMarineCollectionWrapStyle>
       <HaeruPlacesMarineCollectionTitleStyle>

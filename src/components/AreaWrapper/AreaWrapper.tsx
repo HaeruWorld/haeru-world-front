@@ -18,6 +18,9 @@ const AreaWrapper = () => {
         <Button
           className={area === '애월' ? 'selected' : ''}
           color={area === '애월' ? theme.color.primary_01 : '#000'}
+          backgroundColor={
+            area === '애월' ? theme.color.primary_04 : theme.color.gray_06
+          }
           isBorder={area === '애월'}
           text="애월"
           onClick={() => setArea('애월')}
@@ -25,6 +28,9 @@ const AreaWrapper = () => {
         <Button
           className={area === '제주' ? 'selected' : ''}
           color={area === '제주' ? theme.color.primary_01 : '#000'}
+          backgroundColor={
+            area === '제주' ? theme.color.primary_04 : theme.color.gray_06
+          }
           isBorder={area === '제주'}
           text="제주"
           onClick={() => setArea('제주')}
@@ -32,6 +38,9 @@ const AreaWrapper = () => {
         <Button
           className={area === '성산' ? 'selected' : ''}
           color={area === '성산' ? theme.color.primary_01 : '#000'}
+          backgroundColor={
+            area === '성산' ? theme.color.primary_04 : theme.color.gray_06
+          }
           isBorder={area === '성산'}
           text="성산"
           onClick={() => setArea('성산')}
@@ -39,6 +48,9 @@ const AreaWrapper = () => {
         <Button
           className={area === '서귀포' ? 'selected' : ''}
           color={area === '서귀포' ? theme.color.primary_01 : '#000'}
+          backgroundColor={
+            area === '서귀포' ? theme.color.primary_04 : theme.color.gray_06
+          }
           isBorder={area === '서귀포'}
           text="서귀포"
           onClick={() => setArea('서귀포')}

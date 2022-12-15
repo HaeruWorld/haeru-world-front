@@ -7,6 +7,7 @@ export const HomeWrapStyle = styled.div`
   justify-content: space-between;
   padding-bottom: 42px;
   height: 100%;
+  text-align: center;
 
   img {
     object-fit: cover;
@@ -22,4 +23,6 @@ export const HomeContentStyle = styled.p`
   font-size: 18px;
 `;
 
-export const ButtonStyle = styled(Button)``;
+export const ButtonStyle = styled(Button)`
+  width: 90%;
+`;
