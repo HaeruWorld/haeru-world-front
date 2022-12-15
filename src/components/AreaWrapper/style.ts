@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 export const LocationWrapperStyle = styled.div`
+  padding: 0 20px;
+
   & > img {
     width: 100%;
     height: 100%;
@@ -12,6 +14,7 @@ export const LocationWrapperStyle = styled.div`
   }
 
   .btn-list {
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -29,6 +32,6 @@ export const LocationWrapperStyle = styled.div`
   }
 
   .next-btn {
-    margin-top: 30px;
+    margin-top: 45px;
   }
 `;
