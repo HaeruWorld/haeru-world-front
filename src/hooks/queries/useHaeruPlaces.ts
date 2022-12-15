@@ -15,8 +15,3 @@ const useHaeruPlaces = (params: GetHaeruPlaceParams) => {
 };
 
 export default useHaeruPlaces;
-
-type QueryHookOptions<
-  T extends (...args: any) => any,
-  QueryFn = Awaited<ReturnType<T>>,
-> = UseQueryOptions<QueryFn, any, QueryFn, any>;

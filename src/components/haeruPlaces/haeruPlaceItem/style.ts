@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import styled from 'styled-components';
 
 export const HaeruPlaceItemWrapStyle = styled.li`
@@ -12,6 +13,11 @@ export const HaeruPlaceItemWrapStyle = styled.li`
   border: 1px solid ${({ theme }) => theme.color.gray_05};
 `;
 
+export const LinkStyle = styled(Link)`
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+`;
 export const HaeruPlaceItemNameStyle = styled.span`
   font-family: 'Pretendard';
   font-style: normal;
