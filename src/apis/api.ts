@@ -1,3 +1,4 @@
+import { HaeruPlace, MarineCollectionType } from '@/types';
 import superFetch from './superFetch';
 
 const api = {
@@ -5,6 +6,25 @@ const api = {
   getHaeruPlaceDetail: async (id: number) => {
     return superFetch.get(`/haeruPlaces/${id}`).then((res) => res.data);
   },
+  getHaeruPlaces: async (params: GetHaeruPlaceParams) => {
+    return superFetch.get<GetHaeruPlaceResponse>(`/haeruPlaces`, {
+      params,
+    });
+  },
+};
+export type GetHaeruPlaceResponse =
+  | {
+      haeruPlaces: HaeruPlace[];
+      recommendPlaces: null;
+    }
+  | {
+      haeruPlaces: null;
+      recommendPlaces: HaeruPlace[];
+    };
+
+export type GetHaeruPlaceParams = {
+  area: string;
+  marineCollections: MarineCollectionType[];
 };
 
 export default api;

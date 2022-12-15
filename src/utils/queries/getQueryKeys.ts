@@ -1,4 +1,10 @@
+import { MarineCollectionType } from '@/types';
+
 type QueryList = {
+  HAERU_PLACES: {
+    area: string;
+    marineCollections: MarineCollectionType[];
+  };
   // 해루질 가능한 장소 상세 페이지
   HAERU_PLACES_DETAIL: number;
 };
