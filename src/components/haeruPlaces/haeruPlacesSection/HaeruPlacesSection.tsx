@@ -36,7 +36,7 @@ const HaeruPlacesSection = () => {
       <HaeruPlaceTitleStyle>
         {isEmpty ? RecommendPlaceTitle : HaeruPlaceListTitle}
       </HaeruPlaceTitleStyle>
-      <MapIllustration />
+      <MapIllustration places={haeruPlaces || recommendPlaces} />
       <HaeruPlaceList places={haeruPlaces || recommendPlaces} />
     </HaeruPlacesSectionWrapperStyle>
   );

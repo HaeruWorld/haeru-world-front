@@ -10,7 +10,7 @@ const HaeruPlaceList = ({ places }: HaeruPlaceListProps) => {
         <HaeruPlaceItem
           key={place.id}
           {...place}
-          selectedCollections={['톳']}
+          selectedCollections={['게', '톳']}
           makerIndex={index}
         />
       ))}
