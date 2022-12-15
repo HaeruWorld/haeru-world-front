@@ -16,7 +16,7 @@ const HomeWrapper = () => {
         <br />
         언제, 어디서, 어떻게 하는지 알아볼까요?
       </HomeContentStyle>
-      <Link href="/location">
+      <Link href="/area">
         <ButtonStyle
           text="바로 알아보기"
           color="#fff"

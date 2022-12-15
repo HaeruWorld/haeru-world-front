@@ -6,6 +6,7 @@ export type ButtonType = {
   radius?: number;
   color?: string;
   disabled?: boolean;
-  backgroundColor: string;
+  backgroundColor?: string;
+  isBorder?: boolean;
   onClick?: MouseEventHandler;
 };

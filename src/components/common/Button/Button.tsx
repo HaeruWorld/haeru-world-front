@@ -9,6 +9,7 @@ const Button = ({
   backgroundColor,
   disabled = false,
   onClick,
+  isBorder = false,
 }: ButtonType) => {
   return (
     <ButtonWrapStyle
@@ -18,6 +19,7 @@ const Button = ({
       radius={radius}
       disabled={disabled}
       onClick={onClick}
+      isBorder={isBorder}
     >
       {text}
     </ButtonWrapStyle>
