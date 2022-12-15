@@ -1,9 +1,9 @@
 import useHaeruPlaces from '@/hooks/queries/useHaeruPlaces';
 
 import HaeruPlaceList from '../haeruPlacesList/HaeruPlaceList';
+import HaeruPlaceTitle from '../haeruPlaceTitle/HaeruPlaceTitle';
 import MapIllustration from '../mapIllustration/MapIllustration';
-
-import { HaeruPlaceTitleStyle, HaeruPlacesSectionWrapperStyle } from './style';
+import { HaeruPlacesSectionWrapperStyle } from './style';
 
 const HaeruPlacesSection = () => {
   const AREA = {
@@ -23,19 +23,15 @@ const HaeruPlacesSection = () => {
   if (!data || isLoading) return null;
 
   const { haeruPlaces, recommendPlaces } = data;
-  const HaeruPlaceListTitle = `"${area}" 에서 “${marineCollections.join(',')}”을
-  해루질하는 장소를 찾아봤어요.`;
-
-  const RecommendPlaceTitle = `"${area}" 에서 “${marineCollections.join(',')}”을
-  해루질하는 장소를 찾지 못했어요.`;
-
   const isEmpty = haeruPlaces === null;
 
   return (
     <HaeruPlacesSectionWrapperStyle>
-      <HaeruPlaceTitleStyle>
-        {isEmpty ? RecommendPlaceTitle : HaeruPlaceListTitle}
-      </HaeruPlaceTitleStyle>
+      <HaeruPlaceTitle
+        isEmpty={isEmpty}
+        area={area}
+        marineCollections={['게']}
+      />
       <MapIllustration places={haeruPlaces || recommendPlaces} />
       <HaeruPlaceList places={haeruPlaces || recommendPlaces} />
     </HaeruPlacesSectionWrapperStyle>
