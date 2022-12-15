@@ -16,6 +16,10 @@ const nextConfig = {
   images: {
     domains: ['haeruworld.s3.ap-northeast-2.amazonaws.com'],
   },
+  i18n: {
+    locales: ['kr'],
+    defaultLocale: 'kr',
+  },
 };
 
 module.exports = nextConfig;
