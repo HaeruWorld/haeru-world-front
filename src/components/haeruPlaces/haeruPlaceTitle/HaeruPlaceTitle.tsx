@@ -1,5 +1,6 @@
 import { MarineCollectionType } from '@/types';
 import React from 'react';
+import styled from 'styled-components';
 import { HaeruPlaceTitleStyle, Highlight } from './style';
 
 type HaeruPlaceTitleProp = {
@@ -13,17 +14,26 @@ const HaeruPlaceTitle = ({
   isEmpty,
 }: HaeruPlaceTitleProp) => {
   const endTitle = isEmpty
-    ? `을(를) 해루질하는 장소를 \n 찾지 못했어요.`
-    : `을(를) 해루질하는 장소를 \n 찾아봤어요.`;
+    ? `해루질하는 장소를 \n 찾지 못했어요.`
+    : `해루질하는 장소를 \n 찾아봤어요.`;
 
   return (
-    <HaeruPlaceTitleStyle>
-      <Highlight>{`"${area}"`}</Highlight>
-      {'에서 '}
-      <Highlight>{`"${marineCollections.join(',')}"`}</Highlight>
-      {endTitle}
-    </HaeruPlaceTitleStyle>
+    <HaeruPlaceTitleWrapperStyle>
+      <HaeruPlaceTitleStyle>
+        <Highlight>{`"${area}"`}</Highlight>
+        {'에서 '}
+        <Highlight>{`"${marineCollections.join(',')}"`}</Highlight>
+        을(를)
+      </HaeruPlaceTitleStyle>
+      <br />
+      <HaeruPlaceTitleStyle>{endTitle}</HaeruPlaceTitleStyle>
+    </HaeruPlaceTitleWrapperStyle>
   );
 };
+
+const HaeruPlaceTitleWrapperStyle = styled.div`
+  width: 100%;
+  margin-bottom: 32px;
+`;
 
 export default HaeruPlaceTitle;

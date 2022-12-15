@@ -4,7 +4,6 @@ export const HaeruPlaceTitleStyle = styled.span`
   font-weight: 700;
   font-size: 18px;
   line-height: 27px;
-  margin-bottom: 32px;
 `;
 
 export const Highlight = styled.span`

@@ -3,7 +3,7 @@ import useHaeruPlaces from '@/hooks/queries/useHaeruPlaces';
 import HaeruPlaceList from '../haeruPlacesList/HaeruPlaceList';
 import HaeruPlaceTitle from '../haeruPlaceTitle/HaeruPlaceTitle';
 import MapIllustration from '../mapIllustration/MapIllustration';
-import { HaeruPlacesSectionWrapperStyle } from './style';
+import { HaeruPlacesSectionWrapperStyle, LogoStyle } from './style';
 
 const HaeruPlacesSection = () => {
   const AREA = {
@@ -27,6 +27,9 @@ const HaeruPlacesSection = () => {
 
   return (
     <HaeruPlacesSectionWrapperStyle>
+      <LogoStyle>
+        <img height={20} src="/images/text_logo.png" alt={'로고 이미지'} />
+      </LogoStyle>
       <HaeruPlaceTitle
         isEmpty={isEmpty}
         area={area}

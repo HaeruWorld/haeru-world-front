@@ -16,3 +16,12 @@ export const HaeruPlacesSectionWrapperStyle = styled.div`
   height: 100%;
   padding: 0 24px 0 24px;
 `;
+
+export const LogoStyle = styled.div`
+  width: 100%;
+  padding: 11px;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
