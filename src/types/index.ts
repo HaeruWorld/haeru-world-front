@@ -1,4 +1,5 @@
 export type HaeruPlace = {
+  id: number;
   name: string;
   marineCollections: MarineCollectionType[];
   address: string;
