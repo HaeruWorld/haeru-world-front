@@ -1,17 +1,45 @@
 import React from 'react';
-import { Map, MapMarker } from 'react-kakao-maps-sdk';
+import useHaeruPlaceDetail from '@/hooks/queries/useHaeruPlaceDetail';
+import { GetServerSideProps } from 'next';
+import HaeruPlacesMap from '@/components/HaeruPlacesDetail/HaeruPlacesMap';
+import HaeruPlacesMarineCollection from '@/components/HaeruPlacesDetail/HaeruPlacesMarineCollection';
+import HaeruPlacesTime from '@/components/HaeruPlacesDetail/HaeruPlacesTime';
+import HaeruNotice from '@/components/HaeruPlacesDetail/HaeruNotice';
+import { dehydrate, QueryClient } from '@tanstack/react-query';
+import api from '@/apis/api';
 
-const HaeruPlaceDetail = () => {
-  return (
-    <Map
-      center={{ lat: 33.5563, lng: 126.79581 }}
-      style={{ width: '100%', height: '360px' }}
-    >
-      <MapMarker position={{ lat: 33.55635, lng: 126.795841 }}>
-        <div style={{ color: '#000' }}>Hello World!</div>
-      </MapMarker>
-    </Map>
+const HaeruPlaceDetail = (props: any) => {
+  const { data } = useHaeruPlaceDetail(
+    props.dehydratedState.queries[0].queryKey[1],
   );
+
+  if (!data) return null;
+
+  const { name, address, location, marineCollections, startTime, endTime } =
+    data;
+
+  return (
+    <div>
+      <HaeruPlacesTime name={name} startTime={startTime} endTime={endTime} />
+      <HaeruPlacesMarineCollection marineCollections={marineCollections} />
+      <HaeruPlacesMap location={location} address={address} />
+      <HaeruNotice />
+    </div>
+  );
+};
+
+export const getServerSideProps: GetServerSideProps = async (context: any) => {
+  const id: number | null = Number(context.params?.id);
+
+  const queryClient = new QueryClient();
+  await queryClient.prefetchQuery(['HAERU_PLACES_DETAIL', id], () =>
+    api.getHaeruPlaceDetail(id),
+  );
+  return {
+    props: {
+      dehydratedState: dehydrate(queryClient),
+    },
+  };
 };
 
 export default HaeruPlaceDetail;
