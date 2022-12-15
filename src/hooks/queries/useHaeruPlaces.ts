@@ -1,0 +1,21 @@
+import api, { GetHaeruPlaceParams } from '@/apis/api';
+import getQueryKey from '@/utils/queries/getQueryKeys';
+import { useQuery, UseQueryOptions } from '@tanstack/react-query';
+
+const useHaeruPlaces = (
+  params: GetHaeruPlaceParams,
+  options?: QueryHookOptions<typeof api.getHaeruPlaces>,
+) => {
+  return useQuery(
+    getQueryKey('HAERU_PLACES', params),
+    () => api.getHaeruPlaces(params),
+    options,
+  );
+};
+
+export default useHaeruPlaces;
+
+type QueryHookOptions<
+  T extends (...args: any) => any,
+  QueryFn = Awaited<ReturnType<T>>,
+> = UseQueryOptions<QueryFn, any, QueryFn, any>;
