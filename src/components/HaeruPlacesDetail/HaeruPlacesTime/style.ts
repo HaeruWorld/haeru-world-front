@@ -24,6 +24,13 @@ export const HaeruPlaceContentTimeStyle = styled.div`
   color: ${theme.color.sub_02};
 `;
 
+export const HaeruPlaceEmptyContentTimeStyle = styled.div`
+  margin-top: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  color: ${theme.color.gray_07};
+`;
+
 export const HaeruPlaceWarningStyle = styled.div`
   background-color: ${theme.color.primary_04};
   margin-top: 4px;
