@@ -1,16 +1,26 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 import MarineCard from '@/components/MarineCard';
 import theme from '../../../styles/theme';
-import { useRecoilState } from 'recoil';
-import { marineCollectionsAtom } from '@/store';
+import { useRecoilState, useRecoilValue } from 'recoil';
+import { areaAtom, marineCollectionsAtom } from '@/store';
 import { RecommendedButtonStyle } from '@/components/MarineCard/style';
 import { MarineCollectionsWrapperStyle } from './style';
-import Link from 'next/link';
 
 const MarineCollectionsWrapper = () => {
+  const router = useRouter();
+  const area = useRecoilValue(areaAtom);
   const [marineCollection, setMarineCollection] = useRecoilState(
     marineCollectionsAtom,
   );
+
+  useEffect(() => {
+    // 해당 페이지로 바로 들어왔을 때는 메인 페이지로 리다이렉트
+    if (!area) {
+      router.push('/');
+    }
+  }, [area]);
 
   return (
     <MarineCollectionsWrapperStyle>

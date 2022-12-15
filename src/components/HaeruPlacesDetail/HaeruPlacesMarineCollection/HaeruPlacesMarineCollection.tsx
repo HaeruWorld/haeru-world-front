@@ -7,7 +7,7 @@ import {
 } from './style';
 import HaeruPlaceMarineCard from '@/components/HaeruPlacesDetail/HaeruPlaceMarineCard';
 
-const haeruPlacesMarineCollection = ({
+const HaeruPlacesMarineCollection = ({
   marineCollections,
 }: HaeruPlacesMarineCollectionProps) => {
   return (
@@ -28,4 +28,4 @@ const haeruPlacesMarineCollection = ({
   );
 };
 
-export default haeruPlacesMarineCollection;
+export default HaeruPlacesMarineCollection;
