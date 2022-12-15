@@ -32,6 +32,6 @@ export const LocationWrapperStyle = styled.div`
   }
 
   .next-btn {
-    margin-top: 25px;
+    margin: 25px 0 20px;
   }
 `;
