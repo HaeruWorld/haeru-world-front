@@ -12,7 +12,6 @@ export const HomeWrapStyle = styled.div`
   img {
     object-fit: cover;
     min-width: 100%;
-    height: 50%;
   }
 `;
 
@@ -25,4 +24,9 @@ export const HomeContentStyle = styled.p`
 
 export const ButtonStyle = styled(Button)`
   width: 90%;
+`;
+
+export const Highlight = styled.span`
+  color: ${({ theme }) => theme.color.primary_03};
+  font-weight: 700;
 `;
