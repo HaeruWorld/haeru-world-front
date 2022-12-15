@@ -16,12 +16,13 @@ const HaeruPlaceItem = ({
 }: HaeruPlaceItemProps) => {
   return (
     <HaeruPlaceItemWrapStyle>
-      <NumberTagStyle>{makerIndex}</NumberTagStyle>
+      <NumberTagStyle>{makerIndex + 1}</NumberTagStyle>
       <ColumStyle>
         <HaeruPlaceItemNameStyle>{name}</HaeruPlaceItemNameStyle>
         <RowStyle>
-          <LineTag text={'게'} /> <LineTag text={'게'} />
-          <LineTag text={'게'} />
+          {marineCollections.map((marineCollection) => (
+            <LineTag key={marineCollection} text={marineCollection} />
+          ))}
         </RowStyle>
       </ColumStyle>
     </HaeruPlaceItemWrapStyle>
