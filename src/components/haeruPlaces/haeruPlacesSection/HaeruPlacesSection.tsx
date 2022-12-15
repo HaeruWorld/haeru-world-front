@@ -1,32 +1,41 @@
 import useHaeruPlaces from '@/hooks/queries/useHaeruPlaces';
 
 import HaeruPlaceList from '../haeruPlacesList/HaeruPlaceList';
+import HaeruPlaceTitle from '../haeruPlaceTitle/HaeruPlaceTitle';
 import MapIllustration from '../mapIllustration/MapIllustration';
-
-import { HaeruPlaceTitleStyle, HaeruPlacesSectionWrapperStyle } from './style';
+import { HaeruPlacesSectionWrapperStyle, LogoStyle } from './style';
 
 const HaeruPlacesSection = () => {
+  const AREA = {
+    애월: 'AEWOL',
+    제주: 'JEJU',
+    성산: 'SEONGSAN',
+    서귀포: 'SEOGWIPO',
+  } as const;
+
+  const area = '애월';
+  const marineCollections = ['게'];
+
   const { isLoading, data } = useHaeruPlaces({
-    area: '성산',
+    area: AREA[area],
     marineCollections: ['게'],
   });
   if (!data || isLoading) return null;
 
   const { haeruPlaces, recommendPlaces } = data;
-  const HaeruPlaceListTitle = `“성산”에서 “보말, 게, 소라, 미역, 조개, 톳”을
-  해루질하는 장소를 찾아봤어요.`;
-
-  const RecommendPlaceTitle = `“성산”에서 “보말, 게, 소라, 미역, 조개, 톳”을
-  해루질하는 장소를 찾지 못했어요.`;
-
   const isEmpty = haeruPlaces === null;
 
   return (
     <HaeruPlacesSectionWrapperStyle>
-      <HaeruPlaceTitleStyle>
-        {isEmpty ? RecommendPlaceTitle : HaeruPlaceListTitle}
-      </HaeruPlaceTitleStyle>
-      <MapIllustration />
+      <LogoStyle>
+        <img height={20} src="/images/text_logo.png" alt={'로고 이미지'} />
+      </LogoStyle>
+      <HaeruPlaceTitle
+        isEmpty={isEmpty}
+        area={area}
+        marineCollections={['게']}
+      />
+      <MapIllustration places={haeruPlaces || recommendPlaces} />
       <HaeruPlaceList places={haeruPlaces || recommendPlaces} />
     </HaeruPlacesSectionWrapperStyle>
   );

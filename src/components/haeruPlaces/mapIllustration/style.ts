@@ -23,6 +23,6 @@ export const NumberTagStyle = styled.div<{ x: number; y: number }>`
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background-color: ${({ theme }) => theme.color.primary_01};
-  color: ${({ theme }) => theme.color.gray_07};
+  background: ${({ theme }) => theme.color.gray_07};
+  color: ${({ theme }) => theme.color.gray_01};
 `;

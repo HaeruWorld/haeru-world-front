@@ -7,6 +7,7 @@ import HaeruPlacesTime from '@/components/HaeruPlacesDetail/HaeruPlacesTime';
 import HaeruNotice from '@/components/HaeruPlacesDetail/HaeruNotice';
 import { dehydrate, QueryClient } from '@tanstack/react-query';
 import api from '@/apis/api';
+import styled from 'styled-components';
 
 const HaeruPlaceDetail = (props: any) => {
   const { data } = useHaeruPlaceDetail(
@@ -19,14 +20,17 @@ const HaeruPlaceDetail = (props: any) => {
     data;
 
   return (
-    <div>
+    <HaeruPlacesWrapperStyle>
       <HaeruPlacesTime name={name} startTime={startTime} endTime={endTime} />
       <HaeruPlacesMarineCollection marineCollections={marineCollections} />
       <HaeruPlacesMap location={location} address={address} />
       <HaeruNotice />
-    </div>
+    </HaeruPlacesWrapperStyle>
   );
 };
+const HaeruPlacesWrapperStyle = styled.div`
+  padding: 0 20px;
+`;
 
 export const getServerSideProps: GetServerSideProps = async (context: any) => {
   const id: number | null = Number(context.params?.id);

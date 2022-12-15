@@ -9,6 +9,7 @@ import {
   HaeruPlaceContentTitleStyle,
   HaeruPlaceContentTimeStyle,
   HaeruPlaceWarningStyle,
+  HaeruPlaceEmptyContentTimeStyle,
 } from './style';
 
 const HaeruPlacesTime = ({
@@ -18,6 +19,8 @@ const HaeruPlacesTime = ({
 }: HaeruPlacesTimeProps) => {
   const area = useRecoilValue(areaAtom);
 
+  const isTimeNull = !startTime || !endTime;
+
   return (
     <HaeruPlacesTimeWrapStyle>
       <HaeruPlaceNameStyle>
@@ -25,15 +28,25 @@ const HaeruPlacesTime = ({
       </HaeruPlaceNameStyle>
       <HaeruPlaceContentStyle>
         <HaeruPlaceContentTitleStyle>
-          오늘의 해루 가능 시간
+          {!isTimeNull
+            ? '오늘의 해루 가능 시간'
+            : '오늘은 갯벌 시간이 맞지 않아'}
         </HaeruPlaceContentTitleStyle>
-        <HaeruPlaceContentTimeStyle>
-          {startTime} ~ {endTime}
-        </HaeruPlaceContentTimeStyle>
+        {isTimeNull ? (
+          <HaeruPlaceEmptyContentTimeStyle>
+            해루질을 할 수 없어요 🥲
+          </HaeruPlaceEmptyContentTimeStyle>
+        ) : (
+          <HaeruPlaceContentTimeStyle>
+            {startTime} ~ {endTime}
+          </HaeruPlaceContentTimeStyle>
+        )}
       </HaeruPlaceContentStyle>
-      <HaeruPlaceWarningStyle>
-        ⓘ 안전을 위해 꼭 시간을 지켜주세요
-      </HaeruPlaceWarningStyle>
+      {!isTimeNull && (
+        <HaeruPlaceWarningStyle>
+          ⓘ 안전을 위해 꼭 시간을 지켜주세요
+        </HaeruPlaceWarningStyle>
+      )}
     </HaeruPlacesTimeWrapStyle>
   );
 };

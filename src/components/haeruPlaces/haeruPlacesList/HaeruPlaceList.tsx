@@ -7,7 +7,12 @@ const HaeruPlaceList = ({ places }: HaeruPlaceListProps) => {
   return (
     <HaeruPlaceListULStyle>
       {places.map((place, index) => (
-        <HaeruPlaceItem key={place.id} {...place} makerIndex={index} />
+        <HaeruPlaceItem
+          key={place.id}
+          {...place}
+          selectedCollections={['게', '톳']}
+          makerIndex={index}
+        />
       ))}
     </HaeruPlaceListULStyle>
   );

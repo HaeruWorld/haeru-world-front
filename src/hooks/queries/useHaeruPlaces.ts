@@ -8,15 +8,10 @@ const useHaeruPlaces = (params: GetHaeruPlaceParams) => {
     () => api.getHaeruPlaces(params),
     {
       select: (data) => {
-        return data.data;
+        return data.data.data;
       },
     },
   );
 };
 
 export default useHaeruPlaces;
-
-type QueryHookOptions<
-  T extends (...args: any) => any,
-  QueryFn = Awaited<ReturnType<T>>,
-> = UseQueryOptions<QueryFn, any, QueryFn, any>;

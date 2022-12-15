@@ -1,10 +1,7 @@
-import { MarineCollectionType } from '@/types';
+import { GetHaeruPlaceParams } from '@/apis/api';
 
 type QueryList = {
-  HAERU_PLACES: {
-    area: string;
-    marineCollections: MarineCollectionType[];
-  };
+  HAERU_PLACES: GetHaeruPlaceParams;
   // 해루질 가능한 장소 상세 페이지
   HAERU_PLACES_DETAIL: number;
 };

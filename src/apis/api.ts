@@ -7,8 +7,11 @@ const api = {
     return superFetch.get(`/haeruPlaces/${id}`).then((res) => res.data);
   },
   getHaeruPlaces: async (params: GetHaeruPlaceParams) => {
-    return superFetch.get<GetHaeruPlaceResponse>(`/haeruPlaces`, {
-      params,
+    return superFetch.get<{ data: GetHaeruPlaceResponse }>(`/haeruPlaces`, {
+      params: {
+        area: params.area,
+        marineCollections: params.marineCollections.join(','),
+      },
     });
   },
 };
@@ -23,7 +26,7 @@ export type GetHaeruPlaceResponse =
     };
 
 export type GetHaeruPlaceParams = {
-  area: string;
+  area: 'AEWOL' | 'JEJU' | 'SEONGSAN' | 'SEOGWIPO';
   marineCollections: MarineCollectionType[];
 };
 

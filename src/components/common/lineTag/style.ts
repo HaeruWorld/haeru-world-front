@@ -6,7 +6,12 @@ export const LineTagStyle = styled.div`
   align-items: center;
   padding: 0px 16px;
   margin-right: 8px;
+  font-size: 13px;
 
-  border: 1px solid #000000;
+  background: ${({ theme }) => theme.color.gray_07};
+  color: ${({ theme }) => theme.color.primary_01};
+  border: 1px solid ${({ theme }) => theme.color.primary_03}};
   border-radius: 4px;
+
+
 `;
