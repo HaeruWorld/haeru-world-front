@@ -13,7 +13,7 @@ export const MarineCardWrapperStyle = styled.div<
   padding: 20px;
   text-align: center;
   width: 100%;
-  height: 175px;
+  height: 160px;
   border-radius: 8px;
   border: ${(props) =>
     props.isSelected
