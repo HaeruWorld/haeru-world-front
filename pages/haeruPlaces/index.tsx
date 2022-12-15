@@ -1,9 +1,10 @@
-import React from 'react'
+import HaeruPlaceItem from '@/components/haeruPlaces/haeruPlaceItem';
+import React from 'react';
 
 const haeruPlacesPage = () => {
   return (
-    <div>haeruPlacesPage</div>
-  )
-}
+    <HaeruPlaceItem name="개방어촌" marineCollections={[]} makerIndex={1} />
+  );
+};
 
-export default haeruPlacesPage
+export default haeruPlacesPage;
