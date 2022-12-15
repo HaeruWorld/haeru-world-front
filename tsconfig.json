@@ -25,6 +25,7 @@
     "incremental": true,
     "isolatedModules": true
   },
+  "types": ["kakao.maps.d.ts"],
   "include": [
     "next-env.d.ts",
     "**/*.ts",
