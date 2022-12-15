@@ -4,7 +4,7 @@ const baseURL = process.env.NEXT_PUBLIC_API_URL;
 
 const SuperFetch = axios.create({
   baseURL,
-  withCredentials: false,
+  withCredentials: true,
   timeout: 20000,
 });
 
