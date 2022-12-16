@@ -23,6 +23,6 @@ export const MarineCollectionsWrapperStyle = styled.div`
   }
 
   button {
-    margin-top: 50px;
+    margin: 30px 0 20px;
   }
 `;
