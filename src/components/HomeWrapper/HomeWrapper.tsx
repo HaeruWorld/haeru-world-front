@@ -7,11 +7,12 @@ import {
   HomeContentStyle,
   HomeWrapStyle,
 } from './style';
+import styled from 'styled-components';
 
 const HomeWrapper = () => {
   return (
     <HomeWrapStyle>
-      <img src="/images/main_picture.png" alt={'메인 이미지'} />
+      <ImageStyle src="/images/main_picture.png" alt={'메인 이미지'} />
       <HomeContentStyle>
         새롭게 바다를 즐기며 <br />
         조개/미역 등을 잡는 활동,
@@ -30,5 +31,7 @@ const HomeWrapper = () => {
     </HomeWrapStyle>
   );
 };
-
+const ImageStyle = styled.img`
+  width: 100%;
+`;
 export default HomeWrapper;
