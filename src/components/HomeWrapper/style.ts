@@ -8,7 +8,6 @@ export const HomeWrapStyle = styled.div`
   padding-bottom: 42px;
   height: 100%;
   text-align: center;
-  margin-top: 32px;
   img {
     object-fit: cover;
     min-width: 100%;~
