@@ -22,7 +22,7 @@ const HaeruPlacesSection = () => {
     area: AREA[area],
     marineCollections,
   });
-  if (!data || isLoading) return null;
+  if (!data || isLoading) return <></>;
   const { haeruPlaces, recommendPlaces } = data;
   const isEmpty = haeruPlaces === null;
 

@@ -10,7 +10,7 @@ export const HomeWrapStyle = styled.div`
   text-align: center;
   img {
     object-fit: cover;
-    min-width: 100%;~
+    min-width: 100%;
   }
 `;
 

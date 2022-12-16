@@ -27,6 +27,7 @@ const HaeruPlaceTitle = ({
       </HaeruPlaceTitleStyle>
       <br />
       <HaeruPlaceTitleStyle>{endTitle}</HaeruPlaceTitleStyle>
+      <br />
       {isEmpty && (
         <HaeruPlaceTitleStyle>
           다른 어종을 채집하는 건 어떠신가요?

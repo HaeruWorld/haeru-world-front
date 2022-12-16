@@ -25,7 +25,7 @@ const MarineCollectionsWrapper = () => {
   return (
     <MarineCollectionsWrapperStyle>
       <img src="/images/area_picture.png" />
-      <div className="title">어떤 생물들이 채집 될까요?</div>
+      <div className="title">어떤 생물들을 채집 할까요?</div>
       <div className="card-list">
         <MarineCard
           isSelected={marineCollection.includes('보말')}
