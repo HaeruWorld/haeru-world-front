@@ -20,13 +20,18 @@ const HaeruPlaceTitle = ({
   return (
     <HaeruPlaceTitleWrapperStyle>
       <HaeruPlaceTitleStyle>
-        <Highlight>{`"${area}"`}</Highlight>
+        <Highlight>{`${area}`}</Highlight>
         {'에서 '}
-        <Highlight>{`"${marineCollections.join(',')}"`}</Highlight>
+        <Highlight>{`${marineCollections.join(',')}`}</Highlight>
         을(를)
       </HaeruPlaceTitleStyle>
       <br />
       <HaeruPlaceTitleStyle>{endTitle}</HaeruPlaceTitleStyle>
+      {isEmpty && (
+        <HaeruPlaceTitleStyle>
+          다른 어종을 채집하는 건 어떠신가요?
+        </HaeruPlaceTitleStyle>
+      )}
     </HaeruPlaceTitleWrapperStyle>
   );
 };

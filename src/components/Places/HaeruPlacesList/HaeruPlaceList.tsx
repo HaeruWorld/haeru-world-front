@@ -1,5 +1,5 @@
 import React from 'react';
-import HaeruPlaceItem from '@/components/HaeruPlaces/HaeruPlaceItem';
+import HaeruPlaceItem from '@/components/Places/HaeruPlaceItem';
 import { HaeruPlaceListULStyle } from './style';
 import { HaeruPlaceListProps } from './types';
 import { useRecoilValue } from 'recoil';

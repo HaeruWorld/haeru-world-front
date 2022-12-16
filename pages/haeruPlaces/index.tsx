@@ -1,5 +1,4 @@
-import styled from 'styled-components';
-import HaeruPlacesSection from '@/components/HaeruPlaces/HaeruPlacesSection';
+import HaeruPlacesSection from '@/components/Places/HaeruPlacesSection';
 import React from 'react';
 
 const HaeruPlacesPage = () => {

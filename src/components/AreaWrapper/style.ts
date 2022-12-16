@@ -1,16 +1,22 @@
 import styled from 'styled-components';
 
 export const LocationWrapperStyle = styled.div`
-  padding: 0 20px;
-
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
   & > img {
     width: 100%;
-    height: 100%;
   }
 
   .title {
-    text-align: center;
     margin: 32px 0;
+    font-family: Pretendard;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
   }
 
   .btn-list {
@@ -18,8 +24,6 @@ export const LocationWrapperStyle = styled.div`
     display: flex;
     flex-direction: column;
     gap: 10px;
-
-    min-height: 100%;
 
     button {
       border: 2px solid ${(props) => props.theme.color.gray_05};
@@ -29,9 +33,5 @@ export const LocationWrapperStyle = styled.div`
         border: 2px solid ${(props) => props.theme.color.primary_02};
       }
     }
-  }
-
-  .next-btn {
-    margin: 25px 0 20px;
   }
 `;
