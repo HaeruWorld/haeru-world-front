@@ -20,7 +20,7 @@ export const HaeruPlacesSectionWrapperStyle = styled.div`
 
 export const LogoStyle = styled.div`
   width: 100%;
-  padding: 11px;
+  padding: 32px 0 16px 0;
   margin-bottom: 8px;
   display: flex;
   justify-content: center;

@@ -6,6 +6,11 @@ export const HaeruNoticeWrapStyle = styled.div`
   padding: 20px 15px;
   background-color: ${theme.color.gray_05};
   text-align: center;
+
+  background: ${theme.color.gray_06};
+
+  border: 3px solid ${theme.color.primary_03};
+  border-radius: 8px;
 `;
 
 export const HaeruNoticeTitleStyle = styled.div`

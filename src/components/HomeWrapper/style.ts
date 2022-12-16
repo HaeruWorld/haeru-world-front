@@ -8,11 +8,9 @@ export const HomeWrapStyle = styled.div`
   padding-bottom: 42px;
   height: 100%;
   text-align: center;
-
   img {
     object-fit: cover;
-    min-width: 100%;
-    height: 50%;
+    min-width: 100%;~
   }
 `;
 
@@ -25,4 +23,9 @@ export const HomeContentStyle = styled.p`
 
 export const ButtonStyle = styled(Button)`
   width: 90%;
+`;
+
+export const Highlight = styled.span`
+  color: ${({ theme }) => theme.color.primary_03};
+  font-weight: 700;
 `;
