@@ -1,8 +1,8 @@
+import styled from 'styled-components';
 import HaeruPlacesSection from '@/components/HaeruPlaces/HaeruPlacesSection';
 import React from 'react';
-import styled from 'styled-components';
 
-const haeruPlacesPage = () => {
+const HaeruPlacesPage = () => {
   return (
     <>
       <HaeruPlacesSection />;
@@ -10,4 +10,4 @@ const haeruPlacesPage = () => {
   );
 };
 
-export default haeruPlacesPage;
+export default HaeruPlacesPage;
