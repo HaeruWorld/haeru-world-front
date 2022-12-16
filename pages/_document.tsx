@@ -43,6 +43,22 @@ export default class MyDocument extends Document {
       <Html>
         <Head>
           <title>바로해루</title>
+          <meta
+            name="viewport"
+            content="initial-scale=1.0, width=device-width"
+          />
+          <meta name="description" content="올바른 해루질, 바로 알아봐요" />
+          <meta property="og:type" content="website" />
+          <meta property="og:title" content="바로해루" />
+          <meta
+            property="og:description"
+            content="올바른 해루질, 바로 알아봐요"
+          />
+          <meta
+            property="og:image"
+            content="https://haeruworld.s3.ap-northeast-2.amazonaws.com/img_cover.png"
+          />
+          <meta property="og:url" content="https://baru-haeru.vercel.app" />
         </Head>
         <body>
           <Main />
