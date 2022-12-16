@@ -5,7 +5,7 @@ export const LocationWrapperStyle = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%;
+
   & > img {
     width: 100%;
   }
@@ -24,6 +24,7 @@ export const LocationWrapperStyle = styled.div`
     display: flex;
     flex-direction: column;
     gap: 10px;
+    margin-bottom: 20px;
 
     button {
       border: 2px solid ${(props) => props.theme.color.gray_05};
