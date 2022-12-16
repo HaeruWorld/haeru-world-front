@@ -6,6 +6,10 @@ export const MapIllustrationStyle = styled.div`
   height: 220px;
   background: #f4f4f4;
   border-radius: 8px;
+  :hover {
+    cursor: pointer;
+    background: ${({ theme }) => theme.color.gray_07};
+  }
 `;
 
 export const NumberTagStyle = styled.div<{ x: number; y: number }>`

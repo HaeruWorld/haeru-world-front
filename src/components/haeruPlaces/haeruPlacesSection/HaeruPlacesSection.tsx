@@ -2,10 +2,10 @@ import useHaeruPlaces from '@/hooks/queries/useHaeruPlaces';
 import { areaAtom, marineCollectionsAtom } from '@/store';
 import { useRecoilValue } from 'recoil';
 
-import HaeruPlaceList from '../haeruPlacesList/HaeruPlaceList';
-import HaeruPlaceTitle from '../haeruPlaceTitle/HaeruPlaceTitle';
-import MapIllustration from '../mapIllustration/MapIllustration';
+import HaeruPlaceTitle from '../HaeruPlaceTitle/HaeruPlaceTitle';
+import MapIllustration from '../MapIllustration/MapIllustration';
 import { HaeruPlacesSectionWrapperStyle, LogoStyle } from './style';
+import HaeruPlaceList from '../HaeruPlacesList/HaeruPlaceList';
 
 const HaeruPlacesSection = () => {
   const AREA = {
