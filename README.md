@@ -1,5 +1,7 @@
-# BaruHaeru
+# BaruHaeru - 구름톤 4기 대상
 맞춤형 해루질 정보 제공 모바일 웹 서비스
+
+[![9oormthon.badge](https://9oormthon-badge.minung.dev/badge.svg?text=%ED%95%B4%EB%A3%A8%EC%9B%94%EB%93%9C%20%ED%99%94%EC%9D%B4%ED%8C%85&speed=2)](https://9oormthon-badge.minung.dev)
 
 🌊 **우리 팀 목표**
 
